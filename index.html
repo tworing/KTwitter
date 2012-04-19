@@ -1,0 +1,46 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<meta charset=UTF-8>
+		<title>twitter widget test</title>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script type="text/javascript" src="jquery.ktwitter.js"></script>
+		<script type="text/javascript">
+		jQuery(document).ready(function( $ ) {
+			$('#t').KTwitter({
+				screenName      : 'libuchao',     // [string]  * Required, the screen name of the user for whom to return results for. Helpful for disambiguating when a valid screen name is also a user ID.
+
+				tweetCount      : 10,             // [integer] Specifies the number of tweets to try and retrieve, up to a maximum of 200. Include retweets in the count.
+				showAvatar      : true,           // [boolean] Show user's profile image.
+				showUserName    : true,           // [boolean] Show user's user name, for example "Barack Hussein Obama Jr."
+				showScreenName  : true,           // [boolean] Show user's screen name, for example @Obama
+				showTweetsTime  : true,           // [boolean] Show the time tweets are created
+				showOriginalUrl : true,           // [boolean] Show original urls, not "t.co/xxxxxxx".
+				includeRetweets : true,           // [boolean] When set to either true, the timeline will contain native retweets (if they exist) in addition to the standard stream of tweets.
+				excludeReplies  : true,           // [boolean] Prevent replies from appearing in the returned timeline.
+				openInNewWindow : true,           // [boolean] Open hyperlink in new window.
+				animateDuration : 2000,           // [integer] The duration(milliseconds) of the animation.
+
+				loadingText     : 'Loading...',   // [string]  The text will be displayed when the tweets is loading.
+				widgetWidth     : '360px',        // [string]  The width of the widget.
+				widgetMargin    : '0px',          // [string]  The margin of the widget.
+				widgetPadding   : '0px',          // [string]  The padding of the widget.
+				textColor       : '#000',         // [string]  This color will be applied to tweets text.
+				screenNameColor : '#999999',      // [string]  The color of screen name.
+				userNameColor   : '#3D7FFA',      // [string]  The color of user name.
+				evenBgColor     : '#8ADEE2',      // [string]  This background color will be applied to tweets whose index number is a even number.
+				oddBgColor      : '#91E5E7',      // [string]  This background color will be applied to tweets whose index number is a odd number.
+				textSize        : '16px',         // [string]  Tweets's font size.
+				textHeight      : '1.4',          // [string]  Line height, also accept value like '20px'.
+				textFont        : 'Georgia',      // [string]  Font family.
+				hyperlinkColor  : '#3D7FFA',      // [string]  The color of the hyperlink.
+				tweetsTimeSize  : '14px',         // [string]  The font size of the time text.
+				tweetsTimeColor : '#999999'       // [string]  The color of the time text.
+			});
+		});
+		</script>
+	</head>
+	<body>
+		<div id="t"></div>
+	</body>
+</html>
