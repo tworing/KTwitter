@@ -17,7 +17,9 @@ Step 2: Add a div element to your html file:
 
 	<div id="myDiv"></div>
 
-Step 3: Select the div element and call `KTwitter()` function. `KTwitter()` takes a single string argument - your screen name(Twitter ID), like this:
+Step 3: Select the div element and call `KTwitter()` function.
+
+`KTwitter()` takes a single string argument - your screen name(Twitter ID), like this:
 
 	$('#myDiv').KTwitter('libuchao');
 
